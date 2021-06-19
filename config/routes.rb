@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 # get 'lists', to: 'lists#index'
 # get 'lists/:id', to: 'lists#show', as: :restaurant
 
-resources :lists, only: [:new, :create, :index, :show]
+resources :lists, only: [:new, :create, :index, :show] do
+  resources :bookmarks, only: [:index, :new, :create]
+end
 end
