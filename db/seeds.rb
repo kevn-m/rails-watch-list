@@ -15,6 +15,8 @@ movies = JSON.parse(uri)
 
 puts "Destroying..."
 Movie.destroy_all
+Bookmark.destroy_all
+List.destroy_all
 
 puts "Creating..."
 5.times do
