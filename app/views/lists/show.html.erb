@@ -3,6 +3,7 @@
 <ul class="list-group">
   <% @list.bookmarks.each do |bookmark| %>
     <li class="list-group-item">
+      <%= image_tag bookmark.movie.poster_url, style: 'width:200px' %>
       <%= bookmark.movie.title %> -
       <%= bookmark.comment %> -
       <%= link_to 'Delete',

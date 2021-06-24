@@ -14,8 +14,8 @@ uri = open(url).read
 movies = JSON.parse(uri)
 
 puts "Destroying..."
-Movie.destroy_all
 Bookmark.destroy_all
+Movie.destroy_all
 List.destroy_all
 
 puts "Creating..."
